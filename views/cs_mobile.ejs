@@ -1,0 +1,277 @@
+<html lang="en">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<meta name="keywords" content="quicky, chat, messenger, conversation, social, communication" />
+    <meta name="description" content="Quicky Chat" />
+    <meta name="subject" content="JapriChat">
+    <meta name="copyright" content="Deni Darmayana">
+    <meta name="revised" content="Tuesday, Mart 10th, 2024, 08:00 am" />
+    <title>CS - PT Japri Pay Nusantara</title>
+    <meta name="theme-color" content="#3332CB">
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <link rel="stylesheet" href="assets/css/style.css"> 
+</head>
+<body>
+	<div class="opening" >
+		<div class="header">
+			<img src="assets/images/logo_top.png">
+		</div>
+		<div class="content" id="chatContainer">
+			
+		</div>
+	</div>
+	<div class="chat-detail" id="detail">
+		<div class="header-chat">
+			<div class="icon" onclick="back('6281220729369')">
+				<img src="assets/images/back.png">
+			</div>
+			
+			<div class="users">
+				<img src="assets/images/users.png" alt="User Image" class="user-image">
+			</div>
+			<div class="title">
+				<div class="title-name"></div>
+				<div id="phone" style="display: none;"></div>
+				<div class="title-status">
+					Online
+				</div>
+			</div>
+			<div class="tools">
+				<img src="assets/images/video.png" alt="User Image" class="video">
+				<img src="assets/images/call.png" alt="User Image">
+			</div>
+		</div>
+		<div class="chatwraper">
+			<div class="list-chat"></div>
+		</div>
+		<div class="bottom">
+			<div class="file" onclick="selectFile()">
+				<svg width="24" height="24" viewBox="0 0 28 28" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <title>attachment 2</title> <desc>Created with Sketch Beta.</desc> <defs> </defs> <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage"> <g id="Icon-Set-Filled" sketch:type="MSLayerGroup" transform="translate(-260.000000, -156.000000)" fill="#ffffff"> <path d="M286.562,166.181 L272.325,180.26 C269.966,182.593 266.141,182.593 263.782,180.26 C261.423,177.928 261.423,174.146 263.782,171.813 L276.596,159.141 C278.168,157.586 280.718,157.586 282.291,159.141 C283.863,160.696 283.863,163.218 282.291,164.772 L269.477,177.444 C268.691,178.222 267.416,178.222 266.629,177.444 C265.843,176.667 265.843,175.406 266.629,174.628 L278.02,163.365 L276.596,161.957 L265.206,173.221 C263.633,174.775 263.633,177.297 265.206,178.853 C266.778,180.407 269.328,180.407 270.901,178.852 L283.714,166.181 C286.073,163.849 286.074,160.065 283.715,157.733 C281.355,155.4 277.531,155.4 275.172,157.733 L261.646,171.108 L261.696,171.157 C259.238,174.281 259.455,178.797 262.358,181.668 C265.262,184.539 269.828,184.754 272.987,182.323 L273.036,182.372 L287.986,167.589 L286.562,166.181" id="attachment-2" sketch:type="MSShapeGroup"> </path> </g> </g> </g></svg>
+			</div>
+			<div class="input">
+				<input type="file" id="InputFile" class="hide" accept="image/*" onchange="handleFileSelect()">
+				<input type="text" class="input-message" placeholder="Masukan Pensan disini" id="pesan"><br>
+				<div id="btnEmoji">
+					<svg height="16" width="16" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512.003 512.003" xml:space="preserve" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <circle style="fill:#FDDF6D;" cx="256.001" cy="256.001" r="256.001"></circle> <path style="fill:#FCC56B;" d="M310.859,474.208c-141.385,0-256-114.615-256-256c0-75.537,32.722-143.422,84.757-190.281 C56.738,70.303,0,156.525,0,256c0,141.385,114.615,256,256,256c65.849,0,125.883-24.87,171.243-65.718 C392.325,464.135,352.77,474.208,310.859,474.208z"></path> <g> <path style="fill:#7F184C;" d="M293.248,427.894L293.248,427.894c-57.23,0-103.624-46.394-103.624-103.624l0,0h207.248l0,0 C396.872,381.5,350.477,427.894,293.248,427.894z"></path> <path style="fill:#7F184C;" d="M245.899,187.173c-5.752,0-10.414-4.663-10.414-10.414c0-13.433-10.928-24.362-24.362-24.362 c-13.433,0-24.362,10.93-24.362,24.362c0,5.752-4.663,10.414-10.414,10.414c-5.752,0-10.414-4.663-10.414-10.414 c0-24.918,20.273-45.19,45.19-45.19s45.19,20.272,45.19,45.19C256.314,182.51,251.651,187.173,245.899,187.173z"></path> <path style="fill:#7F184C;" d="M421.798,187.173c-5.752,0-10.414-4.663-10.414-10.414c0-13.433-10.928-24.362-24.362-24.362 s-24.362,10.93-24.362,24.362c0,5.752-4.663,10.414-10.414,10.414s-10.414-4.663-10.414-10.414c0-24.918,20.273-45.19,45.19-45.19 s45.19,20.272,45.19,45.19C432.213,182.51,427.55,187.173,421.798,187.173z"></path> </g> <g> <path style="fill:#F9A880;" d="M145.987,240.152c-19.011,0-34.423,15.412-34.423,34.423h68.848 C180.41,255.564,164.998,240.152,145.987,240.152z"></path> <path style="fill:#F9A880;" d="M446.251,235.539c-19.011,0-34.423,15.412-34.423,34.423h68.848 C480.676,250.951,465.264,235.539,446.251,235.539z"></path> </g> <path style="fill:#F2F2F2;" d="M214.907,324.27v16.176c0,6.821,5.529,12.349,12.349,12.349h131.982 c6.821,0,12.349-5.529,12.349-12.349V324.27H214.907z"></path> <path style="fill:#FC4C59;" d="M295.422,384.903c-28.011-13.014-59.094-11.123-84.3,2.374c18.94,24.686,48.726,40.616,82.245,40.616 l0,0c14.772,0,28.809-3.112,41.526-8.682C325.564,404.777,312.187,392.692,295.422,384.903z"></path> <ellipse transform="matrix(0.2723 -0.9622 0.9622 0.2723 151.7762 343.0422)" style="fill:#FCEB88;" cx="302.685" cy="71.177" rx="29.854" ry="53.46"></ellipse> </g></svg>
+				</div>
+			</div>
+			<div class="tools" onclick="send()">
+				<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M11.5003 12H5.41872M5.24634 12.7972L4.24158 15.7986C3.69128 17.4424 3.41613 18.2643 3.61359 18.7704C3.78506 19.21 4.15335 19.5432 4.6078 19.6701C5.13111 19.8161 5.92151 19.4604 7.50231 18.7491L17.6367 14.1886C19.1797 13.4942 19.9512 13.1471 20.1896 12.6648C20.3968 12.2458 20.3968 11.7541 20.1896 11.3351C19.9512 10.8529 19.1797 10.5057 17.6367 9.81135L7.48483 5.24303C5.90879 4.53382 5.12078 4.17921 4.59799 4.32468C4.14397 4.45101 3.77572 4.78336 3.60365 5.22209C3.40551 5.72728 3.67772 6.54741 4.22215 8.18767L5.24829 11.2793C5.34179 11.561 5.38855 11.7019 5.407 11.8459C5.42338 11.9738 5.42321 12.1032 5.40651 12.231C5.38768 12.375 5.34057 12.5157 5.24634 12.7972Z" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript" src="assets/js//jquery.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/@joeattardi/emoji-button@3.0.3/dist/index.min.js"></script>
+	<script src="https://cdn.socket.io/4.0.0/socket.io.min.js"></script>
+	<script type="text/javascript">
+		const socket = io();
+		let typingTimeout;
+		const phone = document.getElementById('phone');
+		function scrollToBottom() {
+	      $(".list-chat").scrollTop($(".list-chat")[0].scrollHeight);
+	      console.log($(".list-chat")[0].scrollHeight)
+	    }
+		socket.emit("lisrUsers");
+		socket.on("showListUsers",(data)=>{
+			$(".content").html("")
+			 data.forEach(row => {
+			 	const rowUsers = `<div class="user-container" onclick="showChat('${row.phone}','${row.name}')">
+										<img src="assets/images/users.png" alt="User Image" class="user-image">
+										<div class="user-info">
+									    	<div class="user-name">${row.name}</div>
+									    	<div class="user-message">${row.pesan}</div>
+									  	</div>
+									  	<div class="user-info">
+									  		<div class="message-date">${row.time}</div>
+									  		<div class="message-count ${(row.new > 0 ? "danger" : "")}">${(row.new > 0 ? row.new : "")}</div>
+									  	</div>
+									</div>
+									<div class="overflow"></div>`
+				$(".content").append(rowUsers);
+			 })
+		})
+		socket.on("showListUsersnew",(data)=>{
+			$(".content").html("")
+			 data.forEach(row => {
+			 	const rowUsers = `<div class="user-container" onclick="showChat('${row.phone}','${row.name}')">
+										<img src="assets/images/users.png" alt="User Image" class="user-image">
+										<div class="user-info">
+									    	<div class="user-name">${row.name}</div>
+									    	<div class="user-message">${row.pesan}</div>
+									  	</div>
+									  	<div class="user-info">
+									  		<div class="message-date">${row.time}</div>
+									  		<div class="message-count ${(row.new > 0 ? "danger" : "")}">${(row.new > 0 ? row.new : "")}</div>
+									  	</div>
+									</div>
+									<div class="overflow"></div>`
+				$(".content").append(rowUsers);
+			 })
+		})
+		socket.emit("masuk",{name:"CS Japri Pay",client:"CS Japri Pay"})
+		function showChat(client,name) {
+			scrollToBottom();
+			phone.textContent = client;
+			socket.emit("updatePesan",{phone:client})
+			socket.emit("masuk",{name:"CS Japri Pay",client:client})
+			socket.emit("tampilkanpesan",{phone:client})
+			$(".title-name").html(name)
+			$("#detail").show();
+			$(".opening").hide();
+			socket.on("viewPesan",(data)=>{
+				data.forEach(row => {
+					let classes
+					let url
+					if (row.pengirim == phone.textContent) {
+						classes = "left"
+						if (row.file != null) {
+							url = '../images_users/'+row.file	
+						}
+					}else{
+						classes = "right"
+						if (row.file != null) {
+							url = '../images_cs/'+row.file
+						}
+					}
+					const html = `
+									<div class="chat-item ${classes}">
+										<img src='${url}' class="${(row.file != null ? "" : "hide")}">
+										<p>${row.pesan}</p>
+										<span class="time  ${classes}">${row.time}</span>
+									</div>`
+					$(".list-chat").append(html)
+					
+				})
+				scrollToBottom();
+			})
+			socket.on("fromUsers",(data)=>{
+				$(".list-chat").html("");
+				data.forEach(row => {
+					let classes
+					let url
+					if (row.pengirim == phone.textContent) {
+						classes = "left"
+						url = '../images_users/'+row.file
+					}else{
+						classes = "right"
+						url = '../images_cs/'+row.file
+					}
+					const html = `
+									<div class="chat-item ${classes}">
+										${(row.file != null ? row.file : "")}
+										<img src='${url}' class="${(row.file != null ? "" : "hide")}">
+										<p>${row.pesan}</p>
+										<span class="time  ${classes}">${row.time}</span>
+									</div>`
+					$(".list-chat").append(html)
+					
+				})
+				scrollToBottom();
+				
+			})
+		}
+		
+		function back(client) {
+			socket.emit("masuk",{name:"CS Japri Pay",client:"CS Japri Pay"})
+			$("#detail").hide();
+			$(".opening").show();
+		}
+
+		const pesan = document.getElementById('pesan');
+		const btnEmoji = document.getElementById('btnEmoji');
+		const opening = document.getElementById('opning');
+		const detail = document.getElementById('detail');
+		const file = document.getElementById('InputFile');
+		pesan.addEventListener('input', () => {
+		  clearTimeout(typingTimeout);
+		  socket.emit('typing',{client:"6281220729369"});
+		  typingTimeout = setTimeout(() => {
+		    socket.emit('typing',{client:"CS Japri Pay"});
+		  }, 1000);
+		});
+		function send() {
+			socket.emit("toUser",{pengirim:"99998888",penerima:phone.textContent,text: pesan.value})
+			pesan.value = "";
+			socket.on("fromUsers",(data)=>{
+				$(".list-chat").html("");
+				data.forEach(row => {
+					let classes
+					let url
+					if (row.pengirim == phone.textContent) {
+						classes = "left"
+						url = '../images_users/'+row.file
+					}else{
+						classes = "right"
+						url = '../images_cs/'+row.file
+					}
+					const html = `
+									<div class="chat-item ${classes}">
+										${(row.file != null ? row.file : "")}
+										<img src='${url}' class="${(row.file != null ? "" : "hide")}">
+										<p>${row.pesan}</p>
+										<span class="time  ${classes}">${row.time}</span>
+									</div>`
+					$(".list-chat").append(html)
+				})
+			})
+			scrollToBottom();
+		}
+		$(document).ready(function() {
+			
+			const picker = new EmojiButton({
+				showSearch: false,
+				position: 'bottom-start',
+				initialFocus: pesan
+			});
+			btnEmoji.addEventListener("click",()=>{
+				picker.togglePicker(btnEmoji);
+			})
+			picker.on('emoji', (emoji) => {
+				pesan.value += emoji+" ";
+				pesan.focus();
+			});
+	    })
+		function selectFile() {
+	      		file.click();
+	    }
+    	function handleFileSelect() {
+    		const fileList = event.target.files;
+			  if (fileList.length > 0) {
+			    const selectedFile = fileList[0];
+			    const fileName = selectedFile.name;
+			    // Use FileReader to read the file and convert it to base64
+			    const reader = new FileReader();
+
+			    reader.onload = function (e) {
+			      const base64String = e.target.result;
+			      socket.emit("uploadCS",{gambar:base64String,name:fileName,penerima:phone.textContent})
+			      socket.on("fromUsers",(data)=>{
+					$(".list-chat").html("");
+					data.forEach(row => {
+						let classes
+						let url
+						if (row.pengirim == phone.textContent) {
+							classes = "left"
+							url = '../images_users/'+row.file
+						}else{
+							classes = "right"
+							url = '../images_cs/'+row.file
+						}
+						const html = `
+										<div class="chat-item ${classes}">
+											${(row.file != null ? row.file : "")}
+											<img src='${url}' class="${(row.file != null ? "" : "hide")}">
+											<p>${row.pesan}</p>
+											<span class="time  ${classes}">${row.time}</span>
+										</div>`
+						$(".list-chat").append(html)
+					})
+				})
+				scrollToBottom();
+			    };
+		    	reader.readAsDataURL(selectedFile);
+			}
+    	}
+	</script>
+</body>
+</html>
